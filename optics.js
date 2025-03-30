@@ -129,3 +129,12 @@
                 });
             }
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            let params = new URLSearchParams(window.location.search);
+            let path = params.get("path");
+        
+            if (path && path.includes("detail.html")) {
+                window.location.replace(path);
+            }
+        });
+        
